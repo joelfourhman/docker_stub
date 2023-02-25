@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  builder:
+          image: docker_stub
+          build:
+                context: .
+                dockerfile: Dockerfile
+          container_name: docker_stub
+          volumes:
+          - type: bind
+            source: ./build
+            target: /builder/build
